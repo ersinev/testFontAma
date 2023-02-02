@@ -1,11 +1,13 @@
 .main {
   background: radial-gradient(
     circle at 0% 0%,
-    rgb(0, 96, 78) 5%,
-    rgb(0, 29, 124) 95%
+    rgb(5, 88, 67) 10%,
+    rgb(4, 59, 90) 50%
   );
   color: white;
   height: 100vh;
+  font-family: 'Merriweather', serif;
+  
 }
 .main-body {
   width: 50%;
@@ -14,13 +16,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
   align-items: center !important;
+  position: relative;
 }
 
 .main-body-right {
   border: 2px whitesmoke solid;
   border-radius: 10%;
   padding: 50px;
-  background-color: rgb(29,81,104);
+  background: radial-gradient(
+    circle at 0% 50%,
+    rgb(29, 81, 104) 2%,
+    rgb(5, 88, 67) 300%
+  );
 }
 
 .main-body-left {
@@ -30,21 +37,27 @@
 .dev-finder {
   float: right;
   font-size: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
+  font-size: 50px;
 }
 .find-btn {
   float: right;
-  margin-top: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
   width: 120px !important;
   background: transparent;
   color: white !important;
-
   padding: 10px;
   border: 1px solid white;
-
   height: 40px;
-
   border-radius: 20px 20px;
+  background: radial-gradient(
+    circle at 0% 50%,
+    rgb(44, 93, 81) 1%,
+    rgb(4, 59, 90) 97%
+  );
+
+
 }
 
 .input-user {
@@ -57,6 +70,20 @@
   height: 40px;
 
   border-radius: 20px 20px;
+}
+body::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 20px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .card-img {
@@ -101,8 +128,16 @@ textarea {
 *:focus {
   outline: none;
 }
+@media only screen and (max-width: 334px) {
+  .find-btn {
+    margin-bottom: 10px;
+  }
+  .input-user {
+    width: 200px !important;
+  }
+}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
   .find-btn {
     margin-bottom: 10px;
   }
@@ -125,34 +160,21 @@ textarea {
   }
 }
 @media only screen and (max-width: 400px) {
-    .main {
-      height: 100vh;
-    }
-  
-    .main-body-right >* {
-      display: block;
-    }
-    .main-body{
-      top :50% ;
-      
-      margin-top: 110px;
-    }
+  .main {
+    height: 100vh;
   }
 
+  .main-body-right > * {
+    display: block;
+  }
+  .main-body {
+    top: 50%;
 
-
-@media only screen and (max-width: 760px) {
-  
-   
- 
-  .main-body{
-    top: 30%;
-    
-    width: 90%;
+    margin-top: 110px;
   }
 }
+
 @media only screen and (max-width: 1100px) {
-   
   .card-header {
     display: block;
   }
@@ -163,7 +185,7 @@ textarea {
   .main {
     height: 100vh;
   }
-  .input-user{
+  .input-user {
     width: 300px;
     margin: auto;
   }
@@ -172,5 +194,22 @@ textarea {
   .card-body {
     display: block;
     padding: 0;
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  body::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 20px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 }

@@ -39,9 +39,10 @@ function App() {
             <Col md={5}>
               <div className="main-body-left">
                 <div className="dev-finder">
-                  Dev
-                  <br />
-                  Finder
+                  <div style={{float:'right'}}>Dev</div>
+                  
+                  
+                  <div>Finder</div>
                 </div>
                 <div>
                   <div>
@@ -105,6 +106,7 @@ function App() {
             </Col>
           </Row>
         </div>
+
       </Container>
     </>
   );
