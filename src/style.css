@@ -1,0 +1,176 @@
+.main {
+  background: radial-gradient(
+    circle at 0% 0%,
+    rgb(0, 96, 78) 5%,
+    rgb(0, 29, 124) 95%
+  );
+  color: white;
+  height: 100vh;
+}
+.main-body {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center !important;
+}
+
+.main-body-right {
+  border: 2px whitesmoke solid;
+  border-radius: 10%;
+  padding: 50px;
+  background-color: rgb(29,81,104);
+}
+
+.main-body-left {
+  float: right !important;
+}
+
+.dev-finder {
+  float: right;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+.find-btn {
+  float: right;
+  margin-top: 10px;
+  width: 120px !important;
+  background: transparent;
+  color: white !important;
+
+  padding: 10px;
+  border: 1px solid white;
+
+  height: 40px;
+
+  border-radius: 20px 20px;
+}
+
+.input-user {
+  background: transparent;
+
+  padding: 10px;
+  border: 1px solid white;
+
+  width: 400px;
+  height: 40px;
+
+  border-radius: 20px 20px;
+}
+
+.card-img {
+  width: 33%;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+.card-body {
+  display: flex;
+  justify-content: space-around;
+}
+.left-info {
+  width: 33%;
+  margin-right: 20px;
+}
+.left-info > * {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.right-info {
+  width: 66%;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 66%;
+}
+input,
+select,
+textarea {
+  color: white;
+}
+*:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .find-btn {
+    margin-bottom: 10px;
+  }
+  .input-user {
+    width: fit-content;
+  }
+  .card-header,
+  .card-body {
+    display: block;
+  }
+  .card-img {
+    width: 75px;
+    margin: auto;
+  }
+  .main-body > p {
+    font-size: 10px;
+  }
+  .main {
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 400px) {
+    .main {
+      height: 100vh;
+    }
+  
+    .main-body-right >* {
+      display: block;
+    }
+    .main-body{
+      top :50% ;
+      
+      margin-top: 110px;
+    }
+  }
+
+
+
+@media only screen and (max-width: 760px) {
+  
+   
+ 
+  .main-body{
+    top: 30%;
+    
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+   
+  .card-header {
+    display: block;
+  }
+  .main-body {
+    width: 90%;
+    margin-top: 10px;
+  }
+  .main {
+    height: 100vh;
+  }
+  .input-user{
+    width: 300px;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .card-body {
+    display: block;
+    padding: 0;
+  }
+}
